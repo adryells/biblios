@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Adryell</title>
+	{%block titulo%}
+    {%endblock%}
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    {%block link%}
+    {%endblock%}
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,300;1,300&family=Saira+Extra+Condensed:wght@300&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/b71b4c83fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+		<div class="menu">
+			<h1>bible</h1>
+			<ul>
+				<li><a href="{% url 'index' %}" class="link">Home</a></li>
+				<li><a href="{% url 'categorias' %}" class="link">Categorias</a></li>
+	            <li><a href="{% url 'sobre' %}" class="link">Sobre</a></li>
+            </ul>
+		</div>
+
+
+		<div class="content">
+			{% block content %}
+            {% endblock %}
+		</div>
+
+
+		<div id="icons-social">
+			<a href="https://www.facebook.com/paulo.adryell.1" class="linkIcon"><i class="fab fa-facebook-f"></i></a>
+			<a href="https://www.instagram.com/_adryell.py/" class="linkIcon"><i class="fab fa-instagram"></i></a>
+			<a href="https://twitter.com/P_Adryell" class="linkIcon"><i class="fab fa-twitter"></i></a>
+			<a href="https://github.com/adryells" class="linkIcon"><i class="fab fa-github"></i></a>
+		</div>
+</body>
+</html>

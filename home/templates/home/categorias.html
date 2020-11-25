@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block titulo%}
+	<title>Categorias</title>
+{%endblock%}
+
+{%block link%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/categorias.css' %}">
+{%endblock%}
+
+{% block content %}
+{%for cat in categorias%}
+<div class="categoria">
+	<a href="{{cat.link}}"><h2>{{cat.nome_cat}}</h2></a>
+</div>
+{%endfor%}
+{% endblock %}

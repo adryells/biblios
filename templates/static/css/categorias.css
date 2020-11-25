@@ -1,0 +1,11 @@
+.categoria{
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 2%;
+	background: black;
+	color: white;
+	height: 100%;
+	width: 100%;
+	border-radius: 15%;
+	padding: 20px;
+}

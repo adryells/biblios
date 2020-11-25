@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block titulo%}
+	<title>Pagina Principal</title>
+{%endblock%}
+{%block link%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{%endblock%}
+{% block content %}
+{%for livro in livros%}
+	{%if livro.publicado%}
+	<div class="livro">
+		<a href=" {%url 'show_book' livro.id %}"><img src="{{livro.imagem.url}}">
+		<h1>{{livro.titulo}}</h1>
+		<p>{{livro.resumo}}</p>
+		<p>{{livro.autor}}</p></a>
+	</div>
+	{%endif%}
+{%endfor%}
+{% endblock %}

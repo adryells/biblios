@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block titulo%}
+	<title>{{livro.titulo}}</title>
+{%endblock%}
+{%block link%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/show_book.css' %}">
+{%endblock%}
+{% block content %}
+<div id="tudo">
+	<div id="titulo">
+		{{livro.titulo}}
+		Autor:{{livro.autor}}
+	</div>
+
+	<div id="img">
+		<a href="{{livro.link}}"><img src="{{livro.imagem.url}}"></a>
+	</div>
+
+	<div id="conteudo">
+		{{livro.conteudo | safe}}
+	</div>
+</div>
+{% endblock %}
