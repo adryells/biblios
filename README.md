@@ -1,5 +1,5 @@
 # biblios
-##bibliotequinha virtual que tentei criar usando Django
+##bibliotequinha virtual feita usando Django
 -
 1- Abra linha de comandos/terminal 
 2- entre no repositório 
